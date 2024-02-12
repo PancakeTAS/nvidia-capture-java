@@ -58,13 +58,13 @@ public class NVFBC_FRAME_GRAB_INFO extends Structure {
      * itself on display B will trigger a frame capture on display A.
      * <p>
      * Workarounds include:
-     * <table>
+     * <ul>
      * <li> - Using separate X screens</li>
      * <li> - Disabling the composite extension</li>
      * <li> - Using a compositing manager that properly reports what regions
      *  are damaged</li>
      * <li> - Using NvFBC's diffmaps to find out if the frame changed</li>
-     * </table>
+     * </ul>
      */
     public int bIsNewFrame; // NVFBC_BOOL
 

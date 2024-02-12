@@ -2,6 +2,7 @@ package gay.pancake.capture.structs;
 
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
+import com.sun.jna.ptr.PointerByReference;
 
 import java.util.List;
 
@@ -39,7 +40,7 @@ public class NVFBC_TOSYS_SETUP_PARAMS extends Structure {
      * size is returned in the dwByteSize field of the
      * ::NVFBC_FRAME_GRAB_INFO structure.
      */
-    public Pointer ppBuffer;
+    public PointerByReference ppBuffer;
 
     /**
      * [in] Whether differential maps should be generated.
@@ -65,7 +66,7 @@ public class NVFBC_TOSYS_SETUP_PARAMS extends Structure {
      * This option is not compatible with the ::NVFBC_BUFFER_FORMAT_YUV420P and
      * ::NVFBC_BUFFER_FORMAT_YUV444P buffer formats.
      */
-    public Pointer ppDiffMap;
+    public PointerByReference ppDiffMap;
 
     /**
      * [in] Scaling factor of the differential maps.

@@ -2,8 +2,8 @@ package gay.pancake.capture;
 
 import com.sun.jna.Library;
 import com.sun.jna.Native;
-import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
+import com.sun.jna.ptr.LongByReference;
 import gay.pancake.capture.structs.*;
 
 /**
@@ -69,7 +69,7 @@ public interface NvFBC extends Library {
      *   ::NVFBC_ERR_GL
      *
      */
-    int NvFBCCreateHandle(Pointer pSessionHandle, NVFBC_CREATE_HANDLE_PARAMS pParams);
+    int NvFBCCreateHandle(LongByReference pSessionHandle, NVFBC_CREATE_HANDLE_PARAMS pParams);
 
     /**
      * Destroys the handle of an NvFBC client.
